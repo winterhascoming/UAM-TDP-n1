@@ -1,29 +1,34 @@
-import random
+from random import randint
 
-lista = [1,2,3,4,5]
-portal = random.choice(lista)
-sala = 1
+print("\nCaro herói que ousa enfrentar esta Dungeon\nVocê deve chegar a 9ª Sala para vencer este desafio\nPorém você só possui 7 movimentos\nBoa sorte, você irá precisar!!!\n")
 
 def myApp():
-    tentativas = 1
-    sala = 1
-    vermelho = 1
-    preto = 2
 
-    while (tentativas <=7 ):
-        escolhido = float(input("Qual será o caminho escolhido? \n"))
-        if escolhido == 1:
-            sala = sala + vermelho
-            print("Você está na sala:", sala)
-        elif sala == 8: #só esta funcionando quando o caminho escolhido estiver no else
-            print("Você entrou pelo portal e sua nova sala sera sorteada")
-            sala = portal
-            print("Sua nova sala é:", sala)
-        else:
-            sala = sala + preto
-            print("Você está na sala:", sala)
+    sala = 1
+    tentativas = 1
+
+    while (sala <= 8 and tentativas <=7 ):
+
+        print("\nVocê esta na sala:", sala, "\nEste é seu", tentativas,"º movimento")
+        escolhido = int(input("\nEscolha seu caminho:\n\n[1] - Caminho Vermelho\n[2] - Caminho Preto\n"))
+
+        if (sala == 6 and escolhido == 1):
+            print("\nBom parece que temos um probleminha, o caminho Vermelho está fechado dessa sala\nParece que você irá pelo caminho Preto mesmo...\n")
+            sala = sala + 1
+
+        elif (sala == 8 and escolhido == 2):
+            sala = 1
+            sala = randint(1,5)
+            print("Wow parece que você acaba de atravessar por um portal que te levou para a sala:", sala, "\n")
+
+        sala = sala + escolhido
         tentativas = tentativas + 1
-        print("Essa é sua", tentativas, "ª tentativa")
+
+    if (sala == 9 and tentativas <=7 ):
+        print("\nParabéns herói, você venceu este desafio e chegou a sala 9!!!\n")
+        
+    if (tentativas >= 8):
+        print("\nInfelizmente seus movimentos acabaram meu caro herói\nAgora você está condenado a enfrentar os próximos que se julgam capazes de superar este desafio!\n")
 
 myApp()
 
