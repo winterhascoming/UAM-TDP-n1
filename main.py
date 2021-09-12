@@ -7,7 +7,7 @@ def myApp():
     sala = 1
     tentativas = 1
 
-    while (sala <= 8 and tentativas <=7 ):
+    while (sala <= 8 and tentativas <=7):
 
         print("\nVocê esta na sala:", sala, "\nEste é seu", tentativas,"º movimento")
         escolhido = int(input("\nEscolha seu caminho:\n\n[1] - Caminho Vermelho\n[2] - Caminho Preto\n"))
@@ -20,11 +20,7 @@ def myApp():
             sala = 1
             sala = randint(1,5)
             print("Wow parece que você acaba de atravessar por um portal que te levou para a sala:", sala, "\n")
-            
-        if (escolhido < 1 or escolhido > 2):
-            print("\nBem parece que você escolheu uma parede como caminho meu caro herói, certeza que essa é sua escolha?\nDeveria voltar aos caminhos marcados de Preto e Vermelho para que possa prosseguir!")
-            break
-    
+
         sala = sala + escolhido
         tentativas = tentativas + 1
 
