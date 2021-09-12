@@ -20,7 +20,15 @@ def myApp():
             sala = 1
             sala = randint(1,5)
             print("Wow parece que você acaba de atravessar por um portal que te levou para a sala:", sala, "\n")
-
+            
+        if (escolhido > 2):
+            print("\nBem parece que você escolheu uma parede como caminho meu caro herói, certeza que essa é sua escolha?\nDeveria voltar aos caminhos marcados de Preto e Vermelho para que possa prosseguir!")
+            break
+        
+        if (escolhido < 1):
+            print("\nBem parece que você escolheu uma parede como caminho meu caro herói, certeza que essa é sua escolha?\nDeveria voltar aos caminhos marcados de Preto e Vermelho para que possa prosseguir!")
+            break
+    
         sala = sala + escolhido
         tentativas = tentativas + 1
 
