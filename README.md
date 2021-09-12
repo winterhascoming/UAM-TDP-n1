@@ -10,6 +10,9 @@ MARIA FERNANDA DIAS DA SILVA - 21484701
 MATEUS DE CARVALHO SILVA - 21650792
 
 
+Arquivo principal do código e final no "main.py"
+
+
 Imagem teste sala 6 (Único caminho)
 https://imgur.com/o9vKGkv
 
