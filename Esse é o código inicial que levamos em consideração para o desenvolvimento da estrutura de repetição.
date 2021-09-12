@@ -1,0 +1,15 @@
+sala = 1
+tentativa = 1
+caminho = float(input("digite o caminho")) 
+if (caminho == 1):
+        sala = sala + 2
+        print("vc esta na sala: ", sala)
+elif(sala == 8):
+        print("sala do portal: ", sala)
+else:
+        sala = sala + 1
+        print("vc está na sala: ", sala)
+        tentativa = tentativa + 1
+
+if(sala == 9 and tentativa <= 7):
+    print("ganhou")
